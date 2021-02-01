@@ -1,4 +1,5 @@
 # Something is missing here
+require_relative '.plant.rb'
 
 class Garden
   attr_accessor :name
@@ -14,12 +15,12 @@ class Garden
   end
 end
 
-lawn = Garden.new(name: 'Front Lawn')
+lawn = Garden.new(name: 'Front Lawn') #we can call Garden.new because is defined above
 
-basil = Plant.new(name: 'Basil')
+basil = Plant.new(name: 'Basil') #we can call Plant.new because Plant is defined above
 basil.garden = lawn
 
 cucumber = Plant.new(name: 'Cucumber')
-cucumber.garden = lawn
+cucumber.garden = lawn #we can associate a plant and a garden because both are defined above
 
 p lawn.plants
